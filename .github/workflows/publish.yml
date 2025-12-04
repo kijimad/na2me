@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Build
         run: |
@@ -22,7 +22,7 @@ jobs:
 
       - name: Publish generated content to GitHub Pages
         if: github.ref == 'refs/heads/main'
-        uses: JamesIves/github-pages-deploy-action@v4.7.3
+        uses: JamesIves/github-pages-deploy-action@v4.7.4
         with:
           branch: gh-pages
           folder: wasm
